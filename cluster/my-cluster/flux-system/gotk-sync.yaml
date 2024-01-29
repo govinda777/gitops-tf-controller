@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/jessesanford/gitops-tf-controller.git
+  url: https://github.com/govinda777/gitops-tf-controller.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
