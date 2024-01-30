@@ -8,6 +8,11 @@ docker volume prune
 
 1 - crie um novo cluster
 
+minikube start --profile tf-controller
+
+
+kind create cluster --name tf-controller
+
 ➜ ~ kind create cluster --name tf-controller
 Creating cluster "tf-controller" ...
  ✓ Ensuring node image (kindest/node:v1.27.3) 🖼
@@ -21,12 +26,25 @@ You can now use your cluster with:
 
 kubectl cluster-info --context kind-tf-controller
 
+
+
 Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 🙂
 ➜ ~
+
+0 - Delete o cluster
+
+kind delete cluster --name tf-controller
 
 1 - Crie um novo namepace
 
 kind create cluster --name tf-controller
+
+minikube start --profile tf-controller
+
+Verificar o Status do Cluster:
+
+minikube status --profile tf-controller
+
 
 --
 

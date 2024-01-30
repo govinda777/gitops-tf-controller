@@ -1,5 +1,5 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: tf-controller
@@ -20,7 +20,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: tf-controller
-      version: '>=0.11.0'
+      version: '>=0.9.3'
   interval: 1h0s
   releaseName: tf-controller
   targetNamespace: flux-system
@@ -41,10 +41,10 @@ spec:
     caCertValidityDuration: 24h
     certRotationCheckFrequency: 30m
     image:
-      tag: v0.14.0
+      tag: v0.13.1
     runner:
       image:
-        tag: v0.14.0
+        tag: v0.13.1
     awsPackage:
       install: true
       tag: v4.38.0-v1alpha11
