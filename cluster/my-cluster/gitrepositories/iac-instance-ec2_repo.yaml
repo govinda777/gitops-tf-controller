@@ -4,5 +4,7 @@ metadata:
   name: iac-instance-ec2
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 30s
+  ref:
+    branch: main
   url: https://github.com/govinda777/iac_instance_ec2
