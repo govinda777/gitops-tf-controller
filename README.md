@@ -24,7 +24,7 @@ Creating cluster "tf-controller" ...
 Set kubectl context to "kind-tf-controller"
 You can now use your cluster with:
 
-kubectl cluster-info --context kind-tf-controller
+kubectl cluster-info --context tf-controller
 
 
 

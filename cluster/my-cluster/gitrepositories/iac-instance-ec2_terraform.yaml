@@ -1,7 +1,7 @@
 apiVersion: terraform.core.weave.works/v1beta1
 kind: Terraform
 metadata:
-  name: ec2-instance
+  name: iac-instance-ec2
   namespace: flux-system
 spec:
   path: ./
