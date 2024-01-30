@@ -39,7 +39,7 @@ kind delete cluster --name tf-controller
 
 kind create cluster --name tf-controller
 
-minikube start --profile tf-controller
+minikube start --profile tf-controller  --driver=docker
 
 Verificar o Status do Cluster:
 
