@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   path: ./
+  approvePlan: auto
   sourceRef:
     kind: GitRepository
     name: iac-instance-ec2
