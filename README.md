@@ -62,8 +62,26 @@ flux bootstrap github \
 
 ---
 
+---
 kubectl create secret generic aws-credentials \
 --namespace=flux-system \
 --from-literal=AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
 --from-literal=AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
+---
+
+# Config UI
+
+brew tap weaveworks/tap
+brew install weaveworks/tap/gitops
+
+export PASSWORD="hermes1"
+gitops create dashboard ww-gitops \
+  --password=$PASSWORD \
+  --export > ./cluster/my-cluster/weave-gitops-dashboard.yaml
+
+kubectl get pods -n flux-system
+
+# Start UI
+
+kubectl port-forward svc/ww-gitops-weave-gitops -n flux-system 9001:9001
